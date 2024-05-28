@@ -1,0 +1,40 @@
+
+
+Q#1.
+
+
+use p200018
+'switched to db p200018'
+db.Cities.find({population:{$lt:30,$ne:0}}).limit(2).forEach(printjson);
+
+
+Q#2.
+
+
+db.Cities.find({timezone:"Asia/Jakarta"}).count()
+
+
+Q#3.
+
+
+db.Cities.find({country:"PK",timezone:"Asia/Karachi"}).sort({population:-1}).pretty()
+
+
+Q#4.
+
+
+i)   db.Cities.getIndexes()                                   #Getting getIndexes
+ii)  db.Cities.createIndex({population:-1})                   #creating index
+iii) db.Cities.dropIndex({population:-1})                     #Droping Index
+
+
+Q#5.
+
+
+i)     {timezone:"Europe/Andorra"}
+ii)    {population:{$gt:12955000},country:"AR"}
+
+
+iii)        
+       {"location.longitude":1.6}   #Filter
+       {location:1,population:1}    #Project

@@ -1,0 +1,333 @@
+
+
+
+
+use p200018
+'switched to db p200018'
+
+
+
+Q#4(i).
+
+db.Cities.find({timezone:"Africa/Harare"}).pretty()
+
+
+
+{
+  _id: ObjectId("6450c3bf8256a64663e163de"),
+  name: 'Zvishavane',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 35896,
+  location: {
+    latitude: -20.32674,
+    longitude: 30.06648
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163df"),
+  name: 'Victoria Falls',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 35761,
+  location: {
+    latitude: -17.92353,
+    longitude: 25.84299
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163e0"),
+  name: 'Shurugwi',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 17075,
+  location: {
+    latitude: -19.67016,
+    longitude: 30.00589
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163e1"),
+  name: 'Shangani',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 3835,
+  location: {
+    latitude: -19.78333,
+    longitude: 29.36667
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163e2"),
+  name: 'Shamva',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 10317,
+  location: {
+    latitude: -17.31159,
+    longitude: 31.57561
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163e3"),
+  name: 'Rusape',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 29292,
+  location: {
+    latitude: -18.52785,
+    longitude: 32.12843
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163e4"),
+  name: 'Redcliff',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 33197,
+  location: {
+    latitude: -19.03333,
+    longitude: 29.78333
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163e5"),
+  name: 'Raffingora',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 1957,
+  location: {
+    latitude: -17.03333,
+    longitude: 30.43333
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163e6"),
+  name: 'Plumtree',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 2148,
+  location: {
+    latitude: -20.48333,
+    longitude: 27.81667
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163e7"),
+  name: 'Penhalonga',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 7681,
+  location: {
+    latitude: -18.89112,
+    longitude: 32.69781
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163e8"),
+  name: 'Odzi',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 3438,
+  location: {
+    latitude: -18.96167,
+    longitude: 32.40557
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163e8"),
+  name: 'Odzi',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 3438,
+  location: {
+    latitude: -18.96167,
+    longitude: 32.40557
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163e9"),
+  name: 'Nyazura',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 2110,
+  location: {
+    latitude: -18.70587,
+    longitude: 32.16796
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163ea"),
+  name: 'Nyanga',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 4852,
+  location: {
+    latitude: -18.21667,
+    longitude: 32.75
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163eb"),
+  name: 'Norton',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 52054,
+  location: {
+    latitude: -17.88333,
+    longitude: 30.7
+  }
+}
+
+{
+  _id: ObjectId("6450c3bf8256a64663e163ec"),
+  name: 'Mvurwi',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 7970,
+  location: {
+    latitude: -17.03333,
+    longitude: 30.85
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163ed"),
+  name: 'Mvuma',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 4331,
+  location: {
+    latitude: -19.27924,
+    longitude: 30.52828
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163ee"),
+  name: 'Mutoko',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 9532,
+  location: {
+    latitude: -17.39699,
+    longitude: 32.22677
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163ef"),
+  name: 'Mutare',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 184205,
+  location: {
+    latitude: -18.9707,
+    longitude: 32.67086
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163f0"),
+  name: 'Murehwa',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 8559,
+  location: {
+    latitude: -17.64322,
+    longitude: 31.784
+  }
+}
+{
+  _id: ObjectId("6450c3bf8256a64663e163f1"),
+  name: 'Mount Darwin',
+  country: 'ZW',
+  timezone: 'Africa/Harare',
+  population: 6349,
+  location: {
+    latitude: -16.77251,
+    longitude: 31.58381
+  }
+}
+
+#####################################################################################################################
+ 
+
+ Q#4(ii).
+
+
+ db.Cities.find({"population":{$gt: 12985000}}).pretty()
+
+ {
+  _id: ObjectId("6450c3b58256a64663dfe103"),
+  name: 'Buenos Aires',
+  country: 'AR',
+  timezone: 'America/Argentina/Buenos_Aires',
+  population: 13076300,
+  location: {
+    latitude: -34.61315,
+    longitude: -58.37723
+  }
+}
+
+{
+  _id: ObjectId("6450c3b68256a64663e004f4"),
+  name: 'Shanghai',
+  country: 'CN',
+  timezone: 'Asia/Shanghai',
+  population: 14608512,
+  location: {
+    longitude: 31.22222,
+    latitude: 121.45806
+  }
+}
+
+
+#####################################################################################################################
+
+
+Q#4(iii).
+
+
+db.Cities.find({"location.longitude":{$eq: -58.37723}},{location:1,population:1}).pretty()
+
+{
+  _id: ObjectId("6450c3b58256a64663dfe103"),
+  population: 13076300,
+  location: {
+    latitude: -34.61315,
+    longitude: -58.37723
+  }
+}
+
+#####################################################################################################################
+
+
+Q#5.
+
+
+db.Cities.updateMany({country:"PK","location.longitude":{$eq: 73.2122}},{$set:{"population":550000}})
+
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+
+#####################################################################################################################
+
+Q#6.
+
+
+db.Cities.deleteMany( { timezone:"Asia/Karachi", country:"PK", })
+
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+
+#####################################################################################################################
+
+Q#7.
+
+db.Movies.find({"info.birthname":("Freeman,Crispin McDougal")}).pretty()
+
+

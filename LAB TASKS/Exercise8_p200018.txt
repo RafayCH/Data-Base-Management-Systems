@@ -1,0 +1,112 @@
+QUESTION 1:
+
+MariaDB [person]> DELIMITER $$
+MariaDB [person]> CREATE PROCEDURE insertSummary(IN user INT,IN y INT,IN h INT,IN g INT) 
+    -> Begin INSERT INTO summary (total_users,Yahoo,Hotmail,Gmail) VALUES (user,y,h,g); END$$
+MariaDB [person]> DELIMITER ;
+MariaDB [person]> call insertSummary(1,2,3,1);
+Query OK, 1 row affected (0.016 sec)
+-------------------------------------------------------------------------------------------------------------
+
+QUESTION 2:
+
+MariaDB [person]> DELIMITER $$
+MariaDB [person]> CREATE PROCEDURE insertData(IN uname VARCHAR(50),IN p VARCHAR(50),IN email VARCHAR(50),IN sal INT)
+    -> Begin INSERT INTO users (username,password,email,salary) VALUES (uname,p,email,sal); END$$
+MariaDB [person]> DELIMITER ;
+MariaDB [person]> call insertData('xyz567','xyz090','xyz123@yahoo.com',89000);
+Query OK, 1 row affected (0.010 sec)
+----------------------------------------------------------------------------------------------------------------
+
+QUESTION 3:
+
+MariaDB [person]> DELIMITER $$
+MariaDB [person]> CREATE PROCEDURE countuser()
+    -> Begin Select count(user_id) from users ; END$$
+MariaDB [person]> DELIMITER ;
+MariaDB [person]> call countuser();
++----------------+
+| count(user_id) |
++----------------+
+|              3 |
++----------------+
+1 row in set (0.001 sec)
+-------------------------------------------------------------------------------------------------------------------
+
+QUESTION 4:
+
+MariaDB [person]> DELIMITER $$
+MariaDB [person]> CREATE PROCEDURE avg_sal()
+    -> Begin Select avg(salary) from users ; END$$
+MariaDB [person]> DELIMITER ;
+MariaDB [person]> call avg_sal();
++-------------+
+| avg(salary) |
++-------------+
+|  32500.0000 |
++-------------+
+1 row in set (0.001 sec)
+
+Query OK, 0 rows affected (0.001 sec)
+--------------------------------------------------------------------------------------------------------------------
+
+QUESTION 5:
+
+MariaDB [person]> DELIMITER $$
+MariaDB [person]> CREATE PROCEDURE min_max() 
+    -> Begin Select min(salary),max(salary) from users ; END$$
+MariaDB [person]> DELIMITER ;
+MariaDB [person]> call min_max();
++-------------+-------------+
+| min(salary) | max(salary) |
++-------------+-------------+
+|        5000 |       89000 |
++-------------+-------------+
+1 row in set (0.001 sec)
+
+Query OK, 0 rows affected (0.001 sec)
+----------------------------------------------------------------------------------------------------------------------- 
+
+QUESTION 6:
+(a)
+
+MariaDB [person]> DELIMITER $$
+MariaDB [person]> CREATE TRIGGER users_after_insertion AFTER INSERT ON person.users
+    -> FOR EACH ROW BEGIN
+    -> UPDATE summary SET total_users=total_users+1;
+    -> END$$
+Query OK, 0 rows affected (0.020 sec)
+
+MariaDB [person]> select * from summary;
+    -> $$
++----+-------------+-------+---------+-------+
+| id | total_users | Yahoo | Hotmail | Gmail |
++----+-------------+-------+---------+-------+
+|  1 |           2 |     1 |       0 |     3 |
+|  2 |           1 |     2 |       3 |     1 |
++----+-------------+-------+---------+-------+
+2 rows in set (0.001 sec)
+MariaDB [person]> delimiter ;
+MariaDB [person]> call insertData('ass12','asuhu','asaqs@gmail.com',37292);
+Query OK, 3 rows affected (0.012 sec)
+
+MariaDB [person]> select * from summary;
++----+-------------+-------+---------+-------+
+| id | total_users | Yahoo | Hotmail | Gmail |
++----+-------------+-------+---------+-------+
+|  1 |           3 |     1 |       0 |     3 |
+|  2 |           2 |     2 |       3 |     1 |
++----+-------------+-------+---------+-------+
+2 rows in set (0.001 sec)
+
+
+(b)
+
+MariaDB [person]> DELIMITER $$
+MariaDB [person]> CREATE TRIGGER users_after_deletion
+    -> FOR EACH ROW BEGIN
+    -> UPDATE summary SET total_users=total_users-1;
+    -> END$$
+Query OK, 0 rows affected (0.020 sec)
+
+
